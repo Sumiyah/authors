@@ -8,7 +8,7 @@ const AuthorsForm = () => {
 
   const submitHandler = e => {
     e.preventDefault()
-    axios.post('http://localhost:8000/api/authors/new', {
+    axios.post('https://test-app-authors.herokuapp.com/api/authors/new', {
       name
     })
       .then(res => {

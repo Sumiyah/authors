@@ -12,7 +12,7 @@ const AuthorsList = () => {
   }, [])
 
   function getAuthors() {
-    axios.get('https://test-app-authors.herokuapp.com/api/authors')
+    axios.get('/api/authors')
       .then(res => {
         console.log("RESPONSE:", res);
         setAuthors(res.data.author)

@@ -12,7 +12,7 @@ const AuthorsList = () => {
   }, [])
 
   function getAuthors() {
-    axios.get('/api/authors')
+    axios.get('http://localhost:8000/api/authors')
       .then(res => {
         console.log("RESPONSE:", res);
         setAuthors(res.data.author)
@@ -22,7 +22,7 @@ const AuthorsList = () => {
   }
 
   const deleteThisItem = (authorID) => {
-    axios.delete(`https://test-app-authors.herokuapp.com/api/authors/delete/${authorID}`)
+    axios.delete(`http://localhost:8000/api/authors/delete/${authorID}`)
       .then(response => {
         console.log(response)
         getAuthors()

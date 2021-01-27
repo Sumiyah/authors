@@ -8,7 +8,7 @@ const UpdateAuthor = props => {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    axios.get(`https://test-app-authors.herokuapp.com/api/authors/${props._id}`)
+    axios.get(`http://localhost:8000/api/authors/${props._id}`)
       .then(res => {
         console.log("RESPONSE in Update:", res);
         setName(res.data.author.name)
@@ -18,7 +18,7 @@ const UpdateAuthor = props => {
 
   const changeAuthor = e => {
     e.preventDefault()
-    axios.put(`https://test-app-authors.herokuapp.com/api/authors/update/${props._id}`, {
+    axios.put(`http://localhost:8000/api/authors/update/${props._id}`, {
 
       name,
 

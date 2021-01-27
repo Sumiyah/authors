@@ -3,7 +3,7 @@ console.log("In server.js")
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const port = 8000
+const port = process.env.PORT || 8000
 
 require('./config/mongoose.config')
 app.use(cors())

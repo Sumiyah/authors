@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy":"http://localhost:8000",
+  "proxy":"https://test-app-authors.herokuapp.com",
   "private": true,
   "dependencies": {
     "@reach/router": "^1.3.4",
